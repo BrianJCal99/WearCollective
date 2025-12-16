@@ -489,7 +489,7 @@ export default function AppNavbar() {
 
       <header className="relative bg-slate-50">
         <Link href="/promotions" className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          % Hurry up grab these deals before the sale ends %
+          🎊 Hurry up grab these deals before the sale ends 🎊
         </Link>
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
@@ -612,6 +612,10 @@ export default function AppNavbar() {
               { user ? (
                 <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  <span className="text-sm font-medium text-gray-700 hover:text-gray-800">
+                    🎉 Welcome {user.user_metadata?.firstName}
+                  </span>
+                  <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
                   <Link href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     My Account
                   </Link>

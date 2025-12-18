@@ -19,6 +19,15 @@ const AppFooter = () => {
                           <li className="mb-4">
                               <Link href="/about" className="hover:underline">About</Link>
                           </li>
+                          <li className="mb-4">
+                              <Link href="/contact" className="hover:underline">Contact</Link>
+                          </li>
+                          <li className="mb-4">
+                              <Link href="/qa" className="hover:underline">Q&A</Link>
+                          </li>
+                          <li>
+                              <Link href="/support" className="hover:underline">Support</Link>
+                          </li>
                       </ul>
                   </div>
                   <div>
@@ -27,8 +36,26 @@ const AppFooter = () => {
                           <li className="mb-4">
                               <a href="#" className="hover:underline">Melbourne</a>
                           </li>
-                          <li>
+                          <li className="mb-4">
                               <a href="#" className="hover:underline">Sydney</a>
+                          </li>
+                          <li className="mb-4">
+                              <a href="#" className="hover:underline">Brisbane</a>
+                          </li>
+                          <li className="mb-4">
+                              <a href="#" className="hover:underline">Perth</a>
+                          </li>
+                          <li className="mb-4"  >
+                              <a href="#" className="hover:underline">Adelaide</a>
+                          </li>
+                          <li className="mb-4">
+                              <a href="#" className="hover:underline">Darwin</a>
+                          </li>
+                          <li className="mb-4">
+                              <a href="#" className="hover:underline">Hobart</a>
+                          </li>
+                          <li className="mb-4">
+                              <a href="#" className="hover:underline">Canberra</a>
                           </li>
                       </ul>
                   </div>

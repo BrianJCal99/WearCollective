@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 import StoreProvider from "@/app/store/StoreProvider";
 
@@ -74,6 +75,7 @@ export default async function RootLayout({ children }) {
           <AppBreadcrumb />
           <main>
             {children}
+            <Analytics />
           </main>
           <AppFooter />
         </StoreProvider>

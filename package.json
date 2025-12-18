@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.2.0",
     "@reduxjs/toolkit": "^2.11.2",
     "@supabase/supabase-js": "^2.87.3",
+    "@vercel/analytics": "^1.6.1",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
     "react": "19.2.1",

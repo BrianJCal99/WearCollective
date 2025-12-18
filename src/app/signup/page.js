@@ -17,12 +17,15 @@ export default function SignUp() {
 
   const dispatch = useDispatch();
   const router = useRouter();
-  const { status, error } = useSelector((state) => state.user);
+  const { user, status, error } = useSelector((state) => state.user);
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
-  }, [])
+    if (user) {
+      router.push("/");
+    }
+  }, [user, router])
 
   const handleChange = (e) => {
     const { name, value } = e.target;

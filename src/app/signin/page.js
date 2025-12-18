@@ -19,7 +19,10 @@ export default function SignIn() {
 
   useEffect(() => {
     setIsClient(true)
-  }, [])
+    if (user) {
+      router.push("/");
+    }
+  }, [user, router])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,10 +31,10 @@ export default function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       dispatch(resetError()); // Reset any previous error state
-  
+
       // Dispatch the sign-in action and wait for the result
       const result = await dispatch(
         signInUser({
@@ -39,7 +42,7 @@ export default function SignIn() {
           password: formData.password,
         })
       );
-  
+
       if (result.meta.requestStatus === "fulfilled") {
         // alert("Sign in successful!");
         router.push("/"); // Redirect to the main page
@@ -51,7 +54,7 @@ export default function SignIn() {
     }
   };
 
-  if (!isClient){
+  if (!isClient) {
     return null;
   }
 

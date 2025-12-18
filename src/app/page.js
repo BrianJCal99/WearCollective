@@ -34,7 +34,7 @@ const callouts = [
   {
     name: "Kid's Collection",
     description: "A great collection of kids clothing",
-    imageSrc: 'https://iheaqdluewqbcbcunigk.supabase.co/storage/v1/object/public/placeholders/kids_fashion.jpg',
+    imageSrc: 'https://iheaqdluewqbcbcunigk.supabase.co/storage/v1/object/public/placeholders/kids_fashion3.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '/products/kids',
   },
@@ -79,18 +79,18 @@ export default function Example() {
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:gap-y-6 lg:space-y-0">
             {callouts.map((callout) => (
               <Link key={callout.name} href={callout.href}>
-              <div className="group">
-                <img
-                  alt={callout.imageAlt}
-                  src={callout.imageSrc}
-                  className="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
-                />
-                <h3 className="mt-6 text-sm text-gray-500">
-                  
+                <div className="group">
+                  <img
+                    alt={callout.imageAlt}
+                    src={callout.imageSrc}
+                    className="w-full rounded-lg bg-white object-cover max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
+                  />
+                  <h3 className="mt-6 text-sm text-gray-500">
+
                     {callout.name}
-                </h3>
-                <p className="text-base font-semibold text-gray-900">{callout.description}</p>
-              </div>
+                  </h3>
+                  <p className="text-base font-semibold text-gray-900">{callout.description}</p>
+                </div>
               </Link>
             ))}
           </div>

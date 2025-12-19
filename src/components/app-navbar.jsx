@@ -242,7 +242,7 @@ export default function AppNavbar() {
   return (
     <div className="bg-white fixed w-full z-50">
       {/* Mobile menu */}
-      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+      <Dialog open={open} onClose={setOpen} className="relative z-[60] lg:hidden">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
@@ -376,7 +376,7 @@ export default function AppNavbar() {
         </div>
       </Dialog>
 
-      <Dialog open={cartOpen} onClose={setCartOpen} className="relative z-10">
+      <Dialog open={cartOpen} onClose={setCartOpen} className="relative z-[60]">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"

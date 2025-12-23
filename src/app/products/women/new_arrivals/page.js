@@ -1,16 +1,56 @@
+'use client'
 import React from 'react'
+import Link from 'next/link'
 
-const page = () => {
+const WomenNewArrivalsPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          Women | New Arrivals
+    <div className="bg-white min-h-[70vh] flex items-center justify-center p-6 sm:p-12">
+      <div className="relative w-full max-w-6xl overflow-hidden rounded-[3rem] bg-zinc-950 px-8 py-24 text-center shadow-2xl sm:px-16 sm:py-32">
+        {/* Modern decorative background with Glow effects */}
+        <div className="absolute top-0 left-1/2 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]">
+          <svg viewBox="0 0 1024 1024" className="h-full w-full" aria-hidden="true">
+            <circle cx="512" cy="512" r="512" fill="url(#premium-glow-women-new)" fillOpacity="0.7" />
+            <defs>
+              <radialGradient id="premium-glow-women-new">
+                <stop stopColor="#EC4899" />
+                <stop offset="1" stopColor="#A855F7" />
+              </radialGradient>
+            </defs>
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+
+        <div className="relative z-10 flex flex-col items-center">
+          <span className="mb-6 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold tracking-[0.2em] text-pink-300 uppercase">
+            Coming Soon
+          </span>
+
+          <h1 className="max-w-4xl text-5xl font-black tracking-tighter text-white sm:text-8xl">
+            WOMEN'S <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent italic">NEW ARRIVALS.</span>
+          </h1>
+
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl font-light">
+            Fresh styles, timeless elegance. <br className="hidden sm:block" />
+            Be the first to discover our latest women's collection.
+          </p>
+
+          <div className="mt-12 flex flex-col items-center gap-6 sm:flex-row">
+            <Link
+              href="/"
+              className="group relative inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-bold text-black transition-all hover:scale-105 active:scale-95"
+            >
+              Back to Store
+            </Link>
+            <button className="text-zinc-500 hover:text-white transition-all text-sm font-bold tracking-widest uppercase py-4">
+              Get Notified
+            </button>
+          </div>
+        </div>
+
+        {/* Minimalist Grid Pattern Overlay */}
+        <div className="absolute inset-0 -z-10 opacity-[0.03] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+      </div>
     </div>
   )
 }
 
-export default page
+export default WomenNewArrivalsPage

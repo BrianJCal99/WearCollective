@@ -4,11 +4,11 @@ import { Search, Package, RefreshCw, HelpCircle, User, MessageCircle, ArrowRight
 
 const SupportPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen bg-gray-50 font-[family-name:var(--font-geist-sans)]">
       {/* Hero Search Section */}
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
             How can we help you?
           </h1>
           <div className="relative max-w-2xl mx-auto">
@@ -17,7 +17,7 @@ const SupportPage = () => {
             </div>
             <input
               type="text"
-              className="block w-full pl-10 pr-3 py-4 border border-gray-300 dark:border-gray-600 rounded-xl leading-5 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-lg shadow-sm"
+              className="block w-full pl-10 pr-3 py-4 border border-gray-300 rounded-xl leading-5 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-lg shadow-sm"
               placeholder="Search for answers, e.g. 'Return policy'"
             />
           </div>
@@ -55,8 +55,8 @@ const SupportPage = () => {
 
         {/* Popular Questions Section */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Popular Questions</h2>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 divide-y divide-gray-200 dark:divide-gray-700">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Popular Questions</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 divide-y divide-gray-200">
             <FaqItem question="How do I track my order?" />
             <FaqItem question="What is your return policy?" />
             <FaqItem question="Do you ship internationally?" />
@@ -88,20 +88,20 @@ const SupportPage = () => {
 
 function TopicCard({ icon, title, description, href }) {
   return (
-    <Link href={href} className="flex flex-col p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-200 group">
-      <div className="mb-4 bg-gray-50 dark:bg-gray-700/50 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+    <Link href={href} className="flex flex-col p-6 bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-500 transition-all duration-200 group">
+      <div className="mb-4 bg-gray-50 w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
-      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{description}</p>
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
     </Link>
   )
 }
 
 function FaqItem({ question }) {
   return (
-    <button className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-150 group">
-      <span className="text-gray-700 dark:text-gray-200 font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400">{question}</span>
+    <button className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-150 group">
+      <span className="text-gray-700 font-medium group-hover:text-blue-600">{question}</span>
       <ArrowRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform duration-200" />
     </button>
   )

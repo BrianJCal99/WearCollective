@@ -67,7 +67,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="bg-white flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center flex-col items-center">
           <h1 className="text-center text-4xl font-black tracking-tighter text-gray-900 sm:text-5xl lg:text-6xl">

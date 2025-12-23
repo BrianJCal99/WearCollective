@@ -64,7 +64,7 @@ const callouts = [
 
 export default function Example() {
   return (
-    <div className="pb-24 sm:pb-32">
+    <div className="bg-white pb-24 sm:pb-32">
       <div className="mx-auto max-w-7xl pt-6 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h1 className="text-5xl font-extrabold tracking-tighter text-gray-900 sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.9] text-center lg:text-left">

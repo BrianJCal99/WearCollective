@@ -68,12 +68,12 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <StoreProvider>
           <AppNavbar />
           <AppBreadcrumb />
-          <main>
+          <main className="flex-1">
             {children}
             <Analytics />
           </main>

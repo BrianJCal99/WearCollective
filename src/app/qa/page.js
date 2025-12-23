@@ -30,28 +30,28 @@ function QAPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 font-[family-name:var(--font-geist-sans)]">
+        <div className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8 font-[family-name:var(--font-geist-sans)]">
             <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+                    <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                         Frequently Asked Questions
                     </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-300">
+                    <p className="text-lg text-gray-600">
                         Find answers to common questions about our products and services.
                     </p>
                 </div>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-200 hover:shadow-md">
+                        <div key={index} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-200 hover:shadow-md">
                             <details className="group p-6 cursor-pointer">
-                                <summary className="flex justify-between items-center font-semibold text-gray-900 dark:text-white list-none">
+                                <summary className="flex justify-between items-center font-semibold text-gray-900 list-none">
                                     <span className="text-lg">{faq.question}</span>
                                     <span className="transition-transform duration-300 group-open:rotate-180 text-gray-400 group-hover:text-blue-500">
                                         <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                                     </span>
                                 </summary>
-                                <p className="text-gray-600 dark:text-gray-300 mt-4 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+                                <p className="text-gray-600 mt-4 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
                                     {faq.answer}
                                 </p>
                             </details>
@@ -59,8 +59,8 @@ function QAPage() {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center text-gray-600 dark:text-gray-400">
-                    <p>Can't find what you're looking for? <Link href="/contact" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Contact our support team</Link>.</p>
+                <div className="mt-12 text-center text-gray-600">
+                    <p>Can't find what you're looking for? <Link href="/contact" className="text-blue-600 hover:underline font-medium">Contact our support team</Link>.</p>
                 </div>
             </div>
         </div>

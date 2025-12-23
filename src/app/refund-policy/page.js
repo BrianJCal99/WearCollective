@@ -4,7 +4,7 @@ import { ChevronLeft, RefreshCw, Calendar, CheckCircle2, AlertCircle, CreditCard
 
 const RefundPolicyPage = () => {
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 font-[family-name:var(--font-geist-sans)]">
+        <div className="bg-gray-50 dark:bg-gray-900 font-[family-name:var(--font-geist-sans)]">
             <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 {/* Hero Section */}
                 <div className="text-center mb-16">

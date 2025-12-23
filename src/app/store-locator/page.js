@@ -179,7 +179,7 @@ export default function StoreLocatorPage() {
                         />
 
                         {selectedStore && (
-                            <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 m-8 rounded-2xl shadow-2xl border border-white/20 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-500 z-20">
+                            <div className="hidden lg:block absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 m-8 rounded-2xl shadow-2xl border border-white/20 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-500 z-20">
                                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{selectedStore.name}</p>
                                 <p className="text-sm font-semibold text-slate-900 leading-relaxed mb-2">{selectedStore.address}</p>
                                 <div className="flex items-center gap-4 text-xs font-medium text-slate-500">

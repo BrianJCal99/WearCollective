@@ -11,25 +11,43 @@ import AppBreadcrumb from "@/components/app-breadcrumb";
 export const metadata = {
   metadataBase: new URL('https://www.wearcollective.store'),
   title: {
-    default: 'WearCollective | Sustainable & Inclusive Fashion Store',
+    default: 'Wear Collective | WearCollective - Sustainable & Inclusive Fashion Store',
     template: '%s | WearCollective',
   },
-  description: 'Discover sustainable, inclusive, and high-quality fashion at WearCollective. Shop curated collections for men, women, and kids that celebrate every body and expression.',
-  keywords: ['sustainable fashion', 'inclusive clothing', 'wearcollective', 'online shop', 'men fashion', 'women fashion', 'kids clothing'],
+  description: 'Shop at Wear Collective (WearCollective) for sustainable, inclusive, and high-quality fashion. Discover curated collections for men, women, and kids that celebrate every body and expression. Your destination for ethical fashion.',
+  keywords: [
+    'wear collective',
+    'wearcollective',
+    'wear collective store',
+    'wearcollective.store',
+    'sustainable fashion',
+    'inclusive clothing',
+    'ethical fashion',
+    'online fashion store',
+    'men fashion',
+    'women fashion',
+    'kids clothing',
+    'sustainable clothing',
+    'inclusive fashion'
+  ],
   authors: [{ name: 'WearCollective Team' }],
   creator: 'WearCollective',
   publisher: 'WearCollective',
+  alternates: {
+    canonical: 'https://www.wearcollective.store',
+  },
+  applicationName: 'Wear Collective',
   openGraph: {
-    title: 'WearCollective | Sustainable & Inclusive Fashion Store',
-    description: 'Redefining fashion with high-quality, sustainable, and inclusive pieces for everyone.',
+    title: 'Wear Collective | WearCollective - Sustainable & Inclusive Fashion',
+    description: 'Shop at Wear Collective for high-quality, sustainable, and inclusive fashion pieces for everyone.',
     url: 'https://www.wearcollective.store',
-    siteName: 'WearCollective',
+    siteName: 'Wear Collective',
     images: [
       {
-        url: 'https://iheaqdluewqbcbcunigk.supabase.co/storage/v1/object/public/brand_logo/logo_1920x1080px.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'WearCollective Logo',
+        url: '/logo_1920x1080px.jpg',
+        width: 1920,
+        height: 1080,
+        alt: 'Wear Collective Logo - Sustainable Fashion Store',
       },
     ],
     locale: 'en_US',
@@ -37,9 +55,11 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WearCollective | Sustainable & Inclusive Fashion Store',
-    description: 'High-quality, sustainable, and inclusive fashion for everyone.',
-    images: ['https://iheaqdluewqbcbcunigk.supabase.co/storage/v1/object/public/brand_logo/logo_1920x1080px.jpg'],
+    title: 'Wear Collective | Sustainable & Inclusive Fashion Store',
+    description: 'Shop at Wear Collective for high-quality, sustainable, and inclusive fashion for everyone.',
+    images: ['/logo_1920x1080px.jpg'],
+    creator: '@wearcollective',
+    site: '@wearcollective',
   },
   robots: {
     index: true,
@@ -51,6 +71,9 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'EDtPWSD8OBEhCTkqNX4wi7I3jP6PjldbYIHzXTE6qn8',
   },
 };
 const geistSans = Geist({

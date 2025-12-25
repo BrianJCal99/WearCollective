@@ -16,10 +16,11 @@ export const metadata = {
   },
   description: 'Shop at WearCollective for sustainable, inclusive, and high-quality fashion. Discover curated collections for men, women, and kids that celebrate every body and expression. Your destination for ethical fashion.',
   keywords: [
-    'wear collective',
-    'wearcollective',
-    'wear collective store',
     'wearcollective.store',
+    'wearcollective',
+    'wearcollective store',
+    'wear collective',
+    'wear collective store',
     'sustainable fashion',
     'inclusive clothing',
     'ethical fashion',
@@ -42,6 +43,10 @@ export const metadata = {
     description: 'Shop at WearCollective for high-quality, sustainable, and inclusive fashion pieces for everyone.',
     url: 'https://www.wearcollective.store',
     siteName: 'WearCollective',
+    icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+    },
     images: [
       {
         url: '/logo_1920x1080px.jpg',

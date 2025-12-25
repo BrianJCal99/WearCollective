@@ -73,7 +73,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'EDtPWSD8OBEhCTkqNX4wi7I3jP6PjldbYIHzXTE6qn8',
+    google: process.env.GOOGLE_SITE_VERIFICATION,
   },
 };
 const geistSans = Geist({

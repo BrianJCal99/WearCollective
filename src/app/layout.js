@@ -44,16 +44,22 @@ export const metadata = {
     url: 'https://www.wearcollective.store',
     siteName: 'WearCollective',
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon.ico',
+      icon: 'https://www.wearcollective.store/favicon.ico',
+      shortcut: 'https://www.wearcollective.store/favicon.ico',
     },
     images: [
       {
-        url: '/logo_1920x1080px.jpg',
+        url: 'https://www.wearcollective.store/WearCollective_Logo_2100x2100.png',
+        width: 2100,
+        height: 2100,
+        alt: 'WearCollective Logo - Sustainable Fashion Store',
+      },
+      {
+        url: 'https://www.wearcollective.store/WearCollective_Logo_1920x1080.png',
         width: 1920,
         height: 1080,
         alt: 'WearCollective Logo - Sustainable Fashion Store',
-      },
+      }
     ],
     locale: 'en_US',
     type: 'website',
@@ -62,7 +68,20 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'WearCollective | Sustainable & Inclusive Fashion Store',
     description: 'Shop at WearCollective for high-quality, sustainable, and inclusive fashion for everyone.',
-    images: ['/logo_1920x1080px.jpg'],
+    images: [
+      {
+        url: 'https://www.wearcollective.store/WearCollective_Logo_2100x2100.png',
+        width: 2100,
+        height: 2100,
+        alt: 'WearCollective Logo - Sustainable Fashion Store',
+      },
+      {
+        url: 'https://www.wearcollective.store/WearCollective_Logo_1920x1080.png',
+        width: 1920,
+        height: 1080,
+        alt: 'WearCollective Logo - Sustainable Fashion Store',
+      }
+    ],
     creator: '@wearcollective',
     site: '@wearcollective',
   },

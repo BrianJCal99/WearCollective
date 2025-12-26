@@ -66,7 +66,7 @@ const AppFooter = () => {
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
-                        © {new Date().getFullYear()} <Link href="/" className="font-bold"><span className="text-gray-900">WEAR</span><span className="text-indigo-600">COLLECTIVE.</span></Link>. All Rights Reserved.
+                        © {new Date().getFullYear()} <Link href="/" className="font-bold"><span className="text-gray-900">WEAR</span><span className="text-indigo-600">COLLECTIVE</span></Link>. All Rights Reserved.
                     </span>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const AppFooter = () => {
                     <div className="mb-6 md:mb-0">
                         <Link href="/" className="group">
                             <div className="text-2xl font-black tracking-tighter text-gray-900">
-                                WEAR<span className="text-indigo-600">COLLECTIVE.</span>
+                                WEAR<span className="text-indigo-600">COLLECTIVE</span>
                             </div>
                         </Link>
                     </div>

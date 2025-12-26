@@ -11,10 +11,10 @@ import AppBreadcrumb from "@/components/app-breadcrumb";
 export const metadata = {
   metadataBase: new URL('https://www.wearcollective.store'),
   title: {
-    default: 'WearCollective | Sustainable & Inclusive Fashion Store',
-    template: '%s | WearCollective',
+    default: 'WEARCOLLECTIVE | Sustainable & Inclusive Fashion Store',
+    template: '%s | WEARCOLLECTIVE',
   },
-  description: 'Shop at WearCollective for sustainable, inclusive, and high-quality fashion. Discover curated collections for men, women, and kids that celebrate every body and expression. Your destination for ethical fashion.',
+  description: 'Shop at WEARCOLLECTIVE for sustainable, inclusive, and high-quality fashion. Discover curated collections for men, women, and kids that celebrate every body and expression. Your destination for ethical fashion.',
   keywords: [
     'wearcollective.store',
     'wearcollective',
@@ -31,18 +31,18 @@ export const metadata = {
     'sustainable clothing',
     'inclusive fashion'
   ],
-  authors: [{ name: 'WearCollective Team' }],
-  creator: 'WearCollective',
-  publisher: 'WearCollective',
+  authors: [{ name: 'WEARCOLLECTIVE Team' }],
+  creator: 'WEARCOLLECTIVE',
+  publisher: 'WEARCOLLECTIVE',
   alternates: {
     canonical: 'https://www.wearcollective.store',
   },
-  applicationName: 'WearCollective',
+  applicationName: 'WEARCOLLECTIVE',
   openGraph: {
-    title: 'WearCollective | Sustainable & Inclusive Fashion',
-    description: 'Shop at WearCollective for high-quality, sustainable, and inclusive fashion pieces for everyone.',
+    title: 'WEARCOLLECTIVE | Sustainable & Inclusive Fashion',
+    description: 'Shop at WEARCOLLECTIVE for high-quality, sustainable, and inclusive fashion pieces for everyone.',
     url: 'https://www.wearcollective.store',
-    siteName: 'WearCollective',
+    siteName: 'WEARCOLLECTIVE',
     icons: {
       icon: 'https://www.wearcollective.store/favicon.ico',
       shortcut: 'https://www.wearcollective.store/favicon.ico',
@@ -52,13 +52,13 @@ export const metadata = {
         url: 'https://www.wearcollective.store/WearCollective_Logo_2100x2100.png',
         width: 2100,
         height: 2100,
-        alt: 'WearCollective Logo - Sustainable Fashion Store',
+        alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
       },
       {
         url: 'https://www.wearcollective.store/WearCollective_Logo_1920x1080.png',
         width: 1920,
         height: 1080,
-        alt: 'WearCollective Logo - Sustainable Fashion Store',
+        alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
       }
     ],
     locale: 'en_US',
@@ -66,20 +66,20 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WearCollective | Sustainable & Inclusive Fashion Store',
-    description: 'Shop at WearCollective for high-quality, sustainable, and inclusive fashion for everyone.',
+    title: 'WEARCOLLECTIVE | Sustainable & Inclusive Fashion Store',
+    description: 'Shop at WEARCOLLECTIVE for high-quality, sustainable, and inclusive fashion for everyone.',
     images: [
       {
         url: 'https://www.wearcollective.store/WearCollective_Logo_2100x2100.png',
         width: 2100,
         height: 2100,
-        alt: 'WearCollective Logo - Sustainable Fashion Store',
+        alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
       },
       {
         url: 'https://www.wearcollective.store/WearCollective_Logo_1920x1080.png',
         width: 1920,
         height: 1080,
-        alt: 'WearCollective Logo - Sustainable Fashion Store',
+        alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
       }
     ],
     creator: '@wearcollective',

@@ -63,7 +63,7 @@ const BrandsPage = () => {
       <section className="relative h-[70vh] w-full overflow-hidden flex items-center justify-center">
         <Image
           src="https://iheaqdluewqbcbcunigk.supabase.co/storage/v1/object/public/placeholders/hero.png"
-          alt="WearCollective Brands Hero"
+          alt="WEARCOLLECTIVE Brands Hero"
           fill
           className="object-cover"
           priority

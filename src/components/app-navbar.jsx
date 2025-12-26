@@ -299,9 +299,9 @@ export default function AppNavbar() {
               {/* Logo */}
               <div className="flex lg:ml-0">
                 <Link href="/" className="flex items-center">
-                  <span className="sr-only">WearCollective</span>
+                  <span className="sr-only">WEARCOLLECTIVE</span>
                   <div className="text-xl font-black tracking-tighter text-gray-900 sm:text-2xl">
-                    WEAR<span className="text-indigo-600">COLLECTIVE.</span>
+                    WEAR<span className="text-indigo-600">COLLECTIVE</span>
                   </div>
                 </Link>
               </div>
@@ -722,8 +722,8 @@ function ShoppingCart({ open, onClose, items, totalPrice, totalQuantity, onCheck
                     <Link
                       href="/cart"
                       className={`flex items-center justify-center rounded-md border border-transparent px-6 py-3 text-base font-medium text-white shadow-sm transition-colors ${totalQuantity > 0
-                          ? "bg-indigo-600 hover:bg-indigo-700"
-                          : "bg-gray-400 cursor-not-allowed"
+                        ? "bg-indigo-600 hover:bg-indigo-700"
+                        : "bg-gray-400 cursor-not-allowed"
                         }`}
                       onClick={onCheckout}
                     >

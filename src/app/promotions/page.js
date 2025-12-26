@@ -17,7 +17,7 @@ const promotions = [
   {
     id: 2,
     title: 'New Member Exclusive',
-    description: 'Welcome to WearCollective! Enjoy 25% off your first purchase.',
+    description: 'Welcome to WEARCOLLECTIVE! Enjoy 25% off your first purchase.',
     discount: '25',
     validUntil: '2025-12-31',
     category: 'New Members',

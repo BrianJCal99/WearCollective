@@ -28,7 +28,7 @@ const TermsConditionsPage = () => {
                                 <h2 className="text-2xl font-bold text-gray-900">1. Use of Website</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                By accessing and using WearCollective.store, you agree to comply with and be bound by these terms. If you do not agree, please do not use our services. You must be at least 18 years old or have parental consent to use this site.
+                                By accessing and using WEARCOLLECTIVE.store, you agree to comply with and be bound by these terms. If you do not agree, please do not use our services. You must be at least 18 years old or have parental consent to use this site.
                             </p>
                         </section>
 
@@ -53,7 +53,7 @@ const TermsConditionsPage = () => {
                                 <h2 className="text-2xl font-bold text-gray-900">3. Intellectual Property</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                All content on this site, including text, graphics, logos, and images, is the property of WearCollective and is protected by international copyright laws. You may not reproduce, distribute, or create derivative works without our express written consent.
+                                All content on this site, including text, graphics, logos, and images, is the property of WEARCOLLECTIVE and is protected by international copyright laws. You may not reproduce, distribute, or create derivative works without our express written consent.
                             </p>
                         </section>
 
@@ -73,7 +73,7 @@ const TermsConditionsPage = () => {
                                 <h2 className="text-xl font-bold text-gray-900">5. Limitation of Liability</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                WearCollective shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use our products or services, even if we have been advised of the possibility of such damages.
+                                WEARCOLLECTIVE shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use our products or services, even if we have been advised of the possibility of such damages.
                             </p>
                         </section>
 

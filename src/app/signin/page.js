@@ -63,7 +63,7 @@ export default function SignIn() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link href="/" className="flex justify-center flex-col items-center">
           <h1 className="text-center text-4xl font-black tracking-tighter text-gray-900 sm:text-5xl lg:text-6xl">
-            WEAR<span className="text-indigo-600">COLLECTIVE.</span>
+            WEAR<span className="text-indigo-600">COLLECTIVE</span>
           </h1>
         </Link>
         <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">

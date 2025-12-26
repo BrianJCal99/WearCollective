@@ -21,7 +21,7 @@ export async function POST(req) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: 'WearCollective <wearcollective@mail.wearcollective.store>',
+            from: 'WEARCOLLECTIVE <wearcollective@mail.wearcollective.store>',
             to: [email],
             subject: `Hi ${userName}, Welcome to Our Style Community 👋`,
             template: {

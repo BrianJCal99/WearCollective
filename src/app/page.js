@@ -68,7 +68,7 @@ export default function Example() {
       <div className="mx-auto max-w-7xl pt-6 px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h1 className="text-5xl font-extrabold tracking-tighter text-gray-900 sm:text-7xl md:text-8xl lg:text-8xl xl:text-9xl leading-[0.9] text-center lg:text-left">
-            WEAR<br className="sm:hidden" /><span className="text-indigo-600">COLLECTIVE.</span>
+            WEAR<br className="sm:hidden" /><span className="text-indigo-600">COLLECTIVE</span>
           </h1>
           <p className="mt-6 text-xl text-gray-600 max-w-xl font-light leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
             Curating timeless elegance and modern trends. Our collection is designed for those who value quality and minimalist aesthetics.

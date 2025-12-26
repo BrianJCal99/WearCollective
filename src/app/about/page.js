@@ -26,7 +26,7 @@ const values = [
   },
   {
     name: 'Community Driven',
-    description: 'WearCollective is more than a store; it is a platform for connection. We champion independent designers and listen to our community to shape the future of style.'
+    description: 'WEARCOLLECTIVE is more than a store; it is a platform for connection. We champion independent designers and listen to our community to shape the future of style.'
   }
 ]
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
               <span className="text-indigo-600">Empowering You.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              WearCollective is a movement dedicated to bringing high-quality, sustainable, and inclusive fashion to the world. We bridge the gap between conscious creators and stylish consumers.
+              WEARCOLLECTIVE is a movement dedicated to bringing high-quality, sustainable, and inclusive fashion to the world. We bridge the gap between conscious creators and stylish consumers.
             </p>
           </div>
         </div>

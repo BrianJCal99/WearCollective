@@ -92,7 +92,7 @@ export default function StoreLocatorPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
                     <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Find A Store</h1>
-                    <p className="text-lg text-slate-600">Locate a WearCollective boutique near you and experience our collections in person.</p>
+                    <p className="text-lg text-slate-600">Locate a WEARCOLLECTIVE boutique near you and experience our collections in person.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 h-[700px]">

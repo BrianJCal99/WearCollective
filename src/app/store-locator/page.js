@@ -85,7 +85,7 @@ export default function StoreLocatorPage() {
         .toLocaleDateString("en-US", { weekday: "long" })
         .toLowerCase();
 
-    const embedUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLE_MAPS_API_KEY}&q=${selectedStore.coordinates.lat},${selectedStore.coordinates.lng}&zoom=15`;
+    const embedUrl = `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${selectedStore.coordinates.lat},${selectedStore.coordinates.lng}&zoom=15`;
 
     return (
         <div className="min-h-screen bg-slate-50 pt-24 pb-12">

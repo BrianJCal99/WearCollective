@@ -1,5 +1,6 @@
 'use client';
 import { useRef, useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
 import store from "@/app/store/store";
 import { Provider } from "react-redux";
 import { fetchUser } from "@/app/features/user/userSlice";
@@ -16,5 +17,10 @@ export default function StoreProvider({ children }) {
     }
   }, []);
 
-  return <Provider store={store}>{children}</Provider>;
+  return (
+    <Provider store={store}>
+      <Toaster position="top-right" reverseOrder={false} />
+      {children}
+    </Provider>
+  );
 }

@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { signOutUser, resetError } from "@/app/features/user/userSlice"
 import { removeItem, updateQuantity } from "@/app/features/cart/cartSlice"
 import Link from 'next/link'
+import toast from 'react-hot-toast'
 
 import {
   Dialog,
@@ -698,7 +699,7 @@ function ShoppingCart({ open, onClose, items, totalPrice, totalQuantity, onCheck
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
                           {items.map((product) => (
                             <CartItem
-                              key={product.id}
+                              key={`${product.name}-${product.color}-${product.size}`}
                               product={product}
                               dispatch={dispatch}
                             />
@@ -781,14 +782,14 @@ function CartItem({ product, dispatch }) {
           <div className="flex items-center space-x-2">
             <span className="text-gray-500">Qty {product.quantity}</span>
             <button
-              onClick={() => dispatch(updateQuantity({ id: product.id, quantity: product.quantity - 1 }))}
+              onClick={() => dispatch(updateQuantity({ cartId: product.cartId, quantity: product.quantity - 1 }))}
               className="rounded border border-blue-500 bg-transparent px-3 py-1 font-semibold text-blue-700 transition-colors hover:border-transparent hover:bg-blue-500 hover:text-white"
               aria-label="Decrease quantity"
             >
               -
             </button>
             <button
-              onClick={() => dispatch(updateQuantity({ id: product.id, quantity: product.quantity + 1 }))}
+              onClick={() => dispatch(updateQuantity({ cartId: product.cartId, quantity: product.quantity + 1 }))}
               className="rounded border border-blue-500 bg-transparent px-3 py-1 font-semibold text-blue-700 transition-colors hover:border-transparent hover:bg-blue-500 hover:text-white"
               aria-label="Increase quantity"
             >
@@ -799,7 +800,10 @@ function CartItem({ product, dispatch }) {
           <div className="flex">
             <button
               type="button"
-              onClick={() => dispatch(removeItem(product.id))}
+              onClick={() => {
+                dispatch(removeItem(product.cartId));
+                toast.success("Item removed from the cart");
+              }}
               className="font-medium text-indigo-600 hover:text-indigo-500 transition-colors"
             >
               Remove

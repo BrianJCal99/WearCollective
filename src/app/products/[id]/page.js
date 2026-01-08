@@ -11,6 +11,7 @@ import {
   removeItem,
   updateQuantity,
 } from "@/app/features/cart/cartSlice";
+import toast from "react-hot-toast";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -90,20 +91,6 @@ export default function ItemPage() {
     item?.sizes?.length > 0 ? item?.sizes[0] : null
   );
 
-  useEffect(() => {
-    if (item) {
-      setSelectedColor(item.colors?.[0] || null);
-      setSelectedSize(item.sizes?.[0] || null);
-    }
-  }, [item]);
-
-  // Check if the item is in the cart and update UI accordingly
-  const cartItem = useSelector((state) =>
-    state.cart.items.find(
-      (cartItem) => cartItem.id.toString() === id.toString()
-    )
-  );
-
   const [isClient, setIsClient] = useState(false);
 
   const handleSubmit = (event) => {
@@ -113,6 +100,13 @@ export default function ItemPage() {
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  useEffect(() => {
+    if (item) {
+      setSelectedColor(item.colors?.[0] || null);
+      setSelectedSize(item.sizes?.[0] || null);
+    }
+  }, [item]);
 
   if (!isClient) {
     return null;
@@ -301,66 +295,26 @@ export default function ItemPage() {
                 </fieldset>
               </div>
 
-              {!cartItem ? (
-                <button
-                  type="button"
-                  onClick={() =>
-                    dispatch(
-                      addItem({
-                        id: item.id,
-                        name: item.name,
-                        price: item.price,
-                        quantity: 1,
-                        image: item.images[0],
-                        color: selectedColor.color,
-                        size: selectedSize.size,
-                      })
-                    )
-                  }
-                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  Add to bag
-                </button>
-              ) : (
-                <div className="flex flex-col items-center space-y-4 my-4">
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={() =>
-                        dispatch(
-                          updateQuantity({
-                            id: cartItem.id,
-                            quantity: cartItem.quantity - 1,
-                          })
-                        )
-                      }
-                      className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                    >
-                      -
-                    </button>
-                    <p className="px-4">{cartItem.quantity}</p>
-                    <button
-                      onClick={() =>
-                        dispatch(
-                          updateQuantity({
-                            id: cartItem.id,
-                            quantity: cartItem.quantity + 1,
-                          })
-                        )
-                      }
-                      className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-                    >
-                      +
-                    </button>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => dispatch(removeItem(item.id))}
-                    className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                  >
-                    Remove
-                  </button>
-                </div>
-              )}
+              <button
+                type="button"
+                onClick={() => {
+                  dispatch(
+                    addItem({
+                      id: item.id,
+                      name: item.name,
+                      price: item.price,
+                      quantity: 1,
+                      image: item.images[0],
+                      color: selectedColor.color,
+                      size: selectedSize.size,
+                    })
+                  );
+                  toast.success("Item added to the cart");
+                }}
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Add to bag
+              </button>
             </form>
           </div>
 

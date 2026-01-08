@@ -12,22 +12,23 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       const { id, name, price, quantity, image, color, size } = action.payload;
-      const existingItem = state.items.find((item) => item.id === id);
+      const cartId = `${id}-${color}-${size}`;
+      const existingItem = state.items.find((item) => item.cartId === cartId);
 
       if (existingItem) {
         existingItem.quantity += quantity;
-        existingItem.price = existingItem.unitPrice * existingItem.quantity; // Update total price based on quantity
+        existingItem.price = existingItem.unitPrice * existingItem.quantity;
       } else {
-        // Store the unit price separately and calculate total price
         state.items.push({
+          cartId,
           id,
           name,
-          unitPrice: price, // Store unit price separately
-          price: price * quantity, // Total price for the item (unit price * quantity)
+          unitPrice: price,
+          price: price * quantity,
           quantity,
           image,
           color,
-          size
+          size,
         });
       }
 
@@ -35,26 +36,26 @@ const cartSlice = createSlice({
       state.totalPrice += price * quantity;
     },
     removeItem(state, action) {
-      const id = action.payload;
-      const item = state.items.find((item) => item.id === id);
+      const cartId = action.payload;
+      const item = state.items.find((item) => item.cartId === cartId);
 
       if (item) {
         state.totalQuantity -= item.quantity;
         state.totalPrice -= item.price;
-        state.items = state.items.filter((item) => item.id !== id);
+        state.items = state.items.filter((item) => item.cartId !== cartId);
       }
     },
     updateQuantity(state, action) {
-      const { id, quantity } = action.payload;
-      const item = state.items.find((item) => item.id === id);
+      const { cartId, quantity } = action.payload;
+      const item = state.items.find((item) => item.cartId === cartId);
 
-      if (item && quantity >= 1) { // Ensure quantity is at least 1
+      if (item && quantity >= 1) {
         const quantityChange = quantity - item.quantity;
 
         state.totalQuantity += quantityChange;
-        state.totalPrice += (item.unitPrice * quantityChange); // Update total price based on the unit price
+        state.totalPrice += item.unitPrice * quantityChange;
         item.quantity = quantity;
-        item.price = item.unitPrice * quantity; // Recalculate total price for this item
+        item.price = item.unitPrice * quantity;
       }
     },
     clearCart(state) {

@@ -11,6 +11,7 @@ import {
 } from "@/app/features/cart/cartSlice";
 import React from "react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -53,7 +54,7 @@ const CartPage = () => {
               ) : (
                 items.map((product) => (
                   <div
-                    key={product.id}
+                    key={product.cartId}
                     className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm md:p-6"
                   >
                     <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
@@ -74,7 +75,7 @@ const CartPage = () => {
                             onClick={() =>
                               dispatch(
                                 updateQuantity({
-                                  id: product.id,
+                                  cartId: product.cartId,
                                   quantity: product.quantity - 1,
                                 })
                               )
@@ -88,7 +89,7 @@ const CartPage = () => {
                             onClick={() =>
                               dispatch(
                                 updateQuantity({
-                                  id: product.id,
+                                  cartId: product.cartId,
                                   quantity: product.quantity + 1,
                                 })
                               )
@@ -123,7 +124,10 @@ const CartPage = () => {
                           <button
                             type="button"
                             className="inline-flex items-center text-sm font-medium text-red-600 hover:underline"
-                            onClick={() => dispatch(removeItem(product.id))}
+                            onClick={() => {
+                              dispatch(removeItem(product.cartId));
+                              toast.success("Item removed from the cart");
+                            }}
                           >
                             Remove
                           </button>

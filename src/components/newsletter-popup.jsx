@@ -93,21 +93,21 @@ export default function NewsletterPopup() {
                                 <X className="w-5 h-5" />
                             </button>
 
-                            {/* Left: Image Container */}
-                            <div className="md:w-5/12 relative h-48 md:h-auto overflow-hidden">
+                            {/* Left: Image Container - Hidden on Mobile */}
+                            <div className="hidden md:block md:w-5/12 relative overflow-hidden">
                                 <Image
                                     src="/newsletter_image.webp"
                                     alt="Modern Fashion"
                                     fill
                                     className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                                    sizes="(max-width: 768px) 100vw, 40vw"
+                                    sizes="40vw"
                                     priority
                                 />
                                 <div className="absolute inset-0 bg-indigo-900/10 mix-blend-overlay" />
                             </div>
 
-                            {/* Right: Content & Form */}
-                            <div className="md:w-7/12 p-8 md:p-14 flex flex-col justify-center">
+                            {/* Right: Content & Form - Full width on Mobile */}
+                            <div className="w-full md:w-7/12 p-8 md:p-14 flex flex-col justify-center">
                                 <div className="space-y-2 mb-8">
                                     <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-indigo-600">Newsletter</span>
                                     <h2 className="text-4xl font-black text-gray-900 tracking-tighter leading-none">

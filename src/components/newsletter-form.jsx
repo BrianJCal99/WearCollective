@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ marginTop = 'mt-32 sm:mt-48' }) {
   const [email, setEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
@@ -41,7 +41,7 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="mt-32 sm:mt-48 px-6 lg:px-8">
+    <div className={`${marginTop} px-6 lg:px-8`}>
       <div className="mx-auto max-w-7xl">
         <div className="relative isolate overflow-hidden bg-slate-50 px-6 py-24 shadow-sm rounded-3xl border border-gray-100 sm:px-24 xl:py-32">
           <h2 className="mx-auto max-w-2xl text-center text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
@@ -50,7 +50,7 @@ export default function NewsletterForm() {
           <p className="mx-auto mt-4 max-w-xl text-center text-lg leading-8 text-gray-600">
             Subscribe to our newsletter for exclusive drops, seasonal previews, and sustainable fashion insights.
           </p>
-          
+
           <div className="mx-auto mt-10 max-w-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4">
@@ -109,17 +109,16 @@ export default function NewsletterForm() {
                     <div className="absolute right-1/3 top-10 h-2 w-2 animate-ping rounded-full bg-green-400 [animation-duration:1.8s] [animation-delay:100ms]" />
                     <div className="absolute left-1/3 top-5 h-2 w-2 animate-ping rounded-full bg-pink-400 [animation-duration:3s] [animation-delay:800ms]" />
                     <div className="absolute right-1/2 top-[-10px] h-2 w-2 animate-ping rounded-full bg-indigo-400 [animation-duration:2.2s]" />
-                    
+
                     {/* Floating Bits */}
                     <div className="absolute -left-4 top-2 h-1.5 w-1.5 animate-bounce rounded bg-orange-400 [animation-delay:150ms]" />
                     <div className="absolute -right-4 top-4 h-1.5 w-1.5 animate-bounce rounded bg-purple-400 [animation-delay:400ms]" />
                   </div>
                 )}
-                <p className={`text-center text-lg font-bold ${
-                  status === 'success' 
-                    ? 'text-gray-600 flex items-center justify-center gap-2' 
+                <p className={`text-center text-lg font-bold ${status === 'success'
+                    ? 'text-gray-600 flex items-center justify-center gap-2'
                     : 'text-gray-400'
-                }`}>
+                  }`}>
                   {status === 'success' ? `${message}` : message}
                 </p>
               </div>

@@ -26,8 +26,11 @@ const AppFooter = () => {
                                 <li className="mb-4">
                                     <Link href="/support" className="hover:underline">Support</Link>
                                 </li>
-                                <li>
+                                <li className="mb-4">
                                     <Link href="/qa" className="hover:underline">Q&A</Link>
+                                </li>
+                                <li>
+                                    <Link href="/newsletter" className="hover:underline">Newsletter</Link>
                                 </li>
                             </ul>
                         </div>

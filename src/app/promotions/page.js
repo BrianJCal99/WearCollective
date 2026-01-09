@@ -194,7 +194,7 @@ const PromotionsPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/signup"
+              href="/newsletter"
               className="px-8 py-4 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 transition-colors text-sm"
             >
               Subscribe Now

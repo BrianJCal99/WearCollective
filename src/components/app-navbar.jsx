@@ -195,6 +195,7 @@ const navigation = {
   ],
   pages: [
     { name: 'All Products', href: '/products' },
+    { name: 'Newsletter', href: '/newsletter' },
   ],
 }
 

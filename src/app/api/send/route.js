@@ -2,6 +2,10 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Sender address. It must be on a domain verified in Resend; override with RESEND_FROM_EMAIL.
+const FROM_EMAIL =
+    process.env.RESEND_FROM_EMAIL || 'WEARCOLLECTIVE <wearcollective@mail.wearcollective.store>';
+
 export async function POST(req) {
     try {
         const { email, userName } = await req.json();
@@ -21,7 +25,7 @@ export async function POST(req) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: 'WEARCOLLECTIVE <wearcollective@mail.wearcollective.store>',
+            from: FROM_EMAIL,
             to: [email],
             subject: `Hi ${userName}, Welcome to Our Style Community 👋`,
             template: {

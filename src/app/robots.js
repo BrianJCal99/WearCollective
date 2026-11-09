@@ -1,5 +1,7 @@
+import { SITE_URL } from '@/lib/site';
+
 export default function robots() {
-    const baseUrl = 'https://www.wearcollective.store';
+    const baseUrl = SITE_URL;
 
     return {
         rules: [

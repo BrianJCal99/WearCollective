@@ -1,5 +1,7 @@
+import { SITE_URL } from '@/lib/site';
+
 export default function sitemap() {
-    const baseUrl = 'https://www.wearcollective.store';
+    const baseUrl = SITE_URL;
     const currentDate = new Date().toISOString();
 
     // Static routes with their priorities and change frequencies

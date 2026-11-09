@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 
+import { SITE_URL } from "@/lib/site";
 import StoreProvider from "@/app/store/StoreProvider";
 
 import AppNavbar from "@/components/app-navbar";
@@ -9,14 +10,13 @@ import AppFooter from "@/components/app-footer";
 import AppBreadcrumb from "@/components/app-breadcrumb";
 
 export const metadata = {
-  metadataBase: new URL('https://www.wearcollective.store'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'WEARCOLLECTIVE | Sustainable & Inclusive Fashion Store',
     template: '%s | WEARCOLLECTIVE',
   },
   description: 'Shop at WEARCOLLECTIVE for sustainable, inclusive, and high-quality fashion. Discover curated collections for men, women, and kids that celebrate every body and expression. Your destination for ethical fashion.',
   keywords: [
-    'wearcollective.store',
     'wearcollective',
     'wearcollective store',
     'wear collective',
@@ -35,27 +35,27 @@ export const metadata = {
   creator: 'WEARCOLLECTIVE',
   publisher: 'WEARCOLLECTIVE',
   alternates: {
-    canonical: 'https://www.wearcollective.store',
+    canonical: SITE_URL,
   },
   applicationName: 'WEARCOLLECTIVE',
   openGraph: {
     title: 'WEARCOLLECTIVE | Sustainable & Inclusive Fashion',
     description: 'Shop at WEARCOLLECTIVE for high-quality, sustainable, and inclusive fashion pieces for everyone.',
-    url: 'https://www.wearcollective.store',
+    url: SITE_URL,
     siteName: 'WEARCOLLECTIVE',
     icons: {
-      icon: 'https://www.wearcollective.store/favicon.ico',
-      shortcut: 'https://www.wearcollective.store/favicon.ico',
+      icon: `${SITE_URL}/favicon.ico`,
+      shortcut: `${SITE_URL}/favicon.ico`,
     },
     images: [
       {
-        url: 'https://www.wearcollective.store/WearCollective_Logo_2100x2100.png',
+        url: `${SITE_URL}/WearCollective_Logo_2100x2100.png`,
         width: 2100,
         height: 2100,
         alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
       },
       {
-        url: 'https://www.wearcollective.store/WearCollective_Logo_1920x1080.png',
+        url: `${SITE_URL}/WearCollective_Logo_1920x1080.png`,
         width: 1920,
         height: 1080,
         alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
@@ -70,13 +70,13 @@ export const metadata = {
     description: 'Shop at WEARCOLLECTIVE for high-quality, sustainable, and inclusive fashion for everyone.',
     images: [
       {
-        url: 'https://www.wearcollective.store/WearCollective_Logo_2100x2100.png',
+        url: `${SITE_URL}/WearCollective_Logo_2100x2100.png`,
         width: 2100,
         height: 2100,
         alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
       },
       {
-        url: 'https://www.wearcollective.store/WearCollective_Logo_1920x1080.png',
+        url: `${SITE_URL}/WearCollective_Logo_1920x1080.png`,
         width: 1920,
         height: 1080,
         alt: 'WEARCOLLECTIVE Logo - Sustainable Fashion Store',
